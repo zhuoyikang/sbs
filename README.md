@@ -6,7 +6,7 @@ it just broadcast binary to every connected clients.
 
 so, you can use it to do some game prototype.
 
-# useage
+# usage
 
 ```
 mix deps.get

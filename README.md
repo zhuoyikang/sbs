@@ -1,24 +1,20 @@
-# Sbs
+# intro
 
-**TODO: Add description**
+this repository implement a very simple game broadcast server.
 
-## Installation
+it just broadcast binary to every connected clients.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+so, you can use it to do some game prototype.
 
-  1. Add `sbs` to your list of dependencies in `mix.exs`:
+# useage
 
-    ```elixir
-    def deps do
-      [{:sbs, "~> 0.1.0"}]
-    end
-    ```
+```
+mix deps.get
+iex -S mix
+```
 
-  2. Ensure `sbs` is started before your application:
+# client
 
-    ```elixir
-    def application do
-      [applications: [:sbs]]
-    end
-    ```
-
+```
+telnet 127.0.0.1 4000
+```

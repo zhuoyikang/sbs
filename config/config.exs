@@ -21,6 +21,14 @@ use Mix.Config
 #     config :logger, level: :info
 #
 
+config :sbs, :ranch,
+  acceptors: 10,
+  listener_name: :sbs_ref,
+  transport_type: :ranch_tcp,
+  transport_options: [port: 4001]
+
+
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.

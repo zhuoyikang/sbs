@@ -10,6 +10,8 @@ defmodule Sbs do
     children = [
       # Starts a worker by calling: Sbs.Worker.start_link(arg1, arg2, arg3)
       # worker(Sbs.Worker, [arg1, arg2, arg3]),
+      worker(Sbs.Admin, []),
+      worker(Sbs.Acceptor, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

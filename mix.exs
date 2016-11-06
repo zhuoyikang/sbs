@@ -14,7 +14,7 @@ defmodule Sbs.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :ranch],
      mod: {Sbs, []}]
   end
 
@@ -28,6 +28,6 @@ defmodule Sbs.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:ranch, "~> 1.2"} ]
   end
 end

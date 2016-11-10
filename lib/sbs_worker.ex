@@ -51,6 +51,8 @@ defmodule Sbs.Worker do
                   } = state) do
     :ok = transport.setopts(socket, [{:active, :once}])
 
+    Logger.debug("cast: #{inspect data}")
+
     list = :ets.tab2list(:clients)
 
     for {pid, _} <- list, pid != self() ,do: send pid, {:data, data}
